@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  color: #333;
+  padding: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #2c3e50;
+  color: white;
+  border-radius: 10px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.stats button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  background: #3498db;
+  color: white;
+  cursor: pointer;
+}
+
+.main-content {
+  display: grid;
+  gap: 20px;
+}
+
+.events {
+  background: #fff3cd;
+  padding: 10px;
+  border-radius: 8px;
+  display: none;
+}
+
+.events.show {
+  display: block;
+}
+
+.resources {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.lines, .simulation {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.line-card {
+  border: 1px solid #ddd;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.line-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.line-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.line-controls button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+  background: #ecf0f1;
+  cursor: pointer;
+}
+
+.line-controls button:disabled {
+  opacity: 0.5;
+}
+
+#log {
+  margin-top: 15px;
+  padding: 10px;
+  background: #2c3e50;
+  color: #ecf0f1;
+  border-radius: 6px;
+  font-family: monospace;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#runNight {
+  background: #27ae60;
+  color: white;
+}
+
+.bus-item, .driver-item {
+  padding: 6px;
+  margin: 4px 0;
+  background: #e8f4fc;
+  border-radius: 4px;
+}
+
+.bus-item.bus-assigned, .driver-item.driver-assigned {
+  background: #ffeaa7;
+}
+
+.bus-item.bus-in-use, .driver-item.driver-in-use {
+  background: #ff7675;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .resources {
+    grid-template-columns: 1fr;
+  }
+}
