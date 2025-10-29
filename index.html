@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jamstadt Night Transit</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🚌 Jamstadt Night Transit</h1>
+      <div class="stats">
+        <span id="money">💰 5.000 €</span>
+        <span id="night">🌙 Nacht 1</span>
+        <button id="saveBtn">💾 Speichern</button>
+        <button id="loadBtn">📂 Laden</button>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <!-- Ereignisse -->
+      <div id="events" class="events"></div>
+
+      <!-- Busse & Fahrer -->
+      <div class="resources">
+        <div>
+          <h3>🚌 Busse (<span id="availableBuses">2</span>/2 verfügbar)</h3>
+          <div id="busesList"></div>
+        </div>
+        <div>
+          <h3>👨‍✈️ Fahrer (<span id="availableDrivers">2</span>/2 verfügbar)</h3>
+          <div id="driversList"></div>
+        </div>
+      </div>
+
+      <!-- Linienplan -->
+      <div class="lines">
+        <h2>Linienplan</h2>
+        <div id="linesContainer"></div>
+      </div>
+
+      <!-- Simulation -->
+      <div class="simulation">
+        <h2>Simulation</h2>
+        <p>Aktuelle Zeit: <span id="simTime">23:00</span></p>
+        <button id="runNight">▶️ Nacht simulieren (23:00–05:00)</button>
+        <div id="log"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
